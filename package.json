@@ -2,6 +2,7 @@
   "name": "chat-visualization",
   "version": "1.0.0",
   "description": "Facebook messenger chat visualization app",
+  "homepage": "http://daugardas.github.io/facebook-couple-chat-visualization",
   "main": "index.js",
   "author": "Daugardas Lukšas",
   "license": "MIT",
@@ -25,6 +26,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "check-types": "tsc"
   },
   "dependencies": {
