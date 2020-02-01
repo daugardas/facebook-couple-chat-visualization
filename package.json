@@ -1,8 +1,8 @@
 {
-  "name": "chat-visualization",
+  "name": "facebook-couple-chat-visualization",
   "version": "1.0.0",
   "description": "Facebook messenger chat visualization app",
-  "homepage": "https://daugardas.github.io/facebook-couple-chat-visualization/",
+  "homepage": "https://daugardas.github.io/",
   "main": "index.js",
   "author": "Daugardas Lukšas",
   "license": "MIT",
