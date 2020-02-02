@@ -26,9 +26,18 @@ const readFileAsync = (file: File) => {
 };
 
 export async function uploadFiles(files: FileList) {
-  let chats: Chat[] = new Array(files.length);
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
+  const newFiles: File[] = new Array();
+
+  for(let i = 0; i < files.length; i++){
+    const file: File = files[i];
+    if(file.name.split(".").pop() === "json"){
+      newFiles.push(file);
+    }
+  }
+
+  let chats: Chat[] = new Array(newFiles.length);
+  for (let i = 0; i < newFiles.length; i++) {
+    const file = newFiles[i];
     let parsedFile: any = await readFileAsync(file);
     chats[i] = {
       messages: parsedFile.messages,
